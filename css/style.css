@@ -31,10 +31,10 @@ body, html, .container, #app {
 
 .fullPage {
   height: 100%;
-  transition: height .4s ease; }
+  transition: height .3s ease; }
   .fullPage.close {
-    height: 25%;
-    transition-delay: 0.2s; }
+    height: 22%;
+    transition-delay: 0.55s; }
 
 .icon {
   margin: 20px;
@@ -65,19 +65,23 @@ body, html, .container, #app {
 .icon.close {
   width: 0;
   height: 0;
-  transition-delay: 0.3s;
-  -webkit-transition-delay: 0.3s; }
+  transition-delay: 0.35s;
+  -webkit-transition-delay: 0.35s; }
   .icon.close:before {
     width: 0;
-    transition-delay: .1s; }
+    transition-delay: .1s;
+    -webkit-transition-delay: .1s; }
 
-.text {
+div.text {
   opacity: 1;
-  transition: opacity .4s linear;
-  transition-origin: bottom; }
-  .text.close {
+  transition: opacity .3s linear;
+  transition-origin: bottom;
+  -webkit-transition: opacity .3s linear;
+  -webkit-transition-origin: bottom; }
+  div.text.close {
     opacity: 0;
-    transition-delay: .3s; }
+    transition-delay: .35s;
+    -webkit-transition-delay: .35s; }
 
 ul {
   margin-left: 0;
@@ -92,10 +96,12 @@ ul {
     padding: 5px 10px;
     background-color: #eee;
     opacity: 0;
-    transition: opacity .4s ease; }
-    ul li.close {
+    transition: opacity .4s ease;
+    -webkit-transition: opacity .4s ease; }
+    ul li.open {
       opacity: 1;
-      transition-delay: .35s; }
+      transition-delay: .55s;
+      -webkit-transition-delay: .55s; }
     ul li:before, ul li:after {
       position: absolute;
       background-color: #999;
@@ -110,7 +116,8 @@ ul {
       right: 0; }
     ul li:hover:before, ul li:hover:after {
       width: 5px;
-      transition: width 0.8s ease; }
+      transition: width .8s ease;
+      -webkit-transition: width .8s ease; }
     ul li:hover:before {
       animation: move-left .5s linear forwards;
       -webkit-animation: move-left .5s linear forwards; }
@@ -120,10 +127,13 @@ ul {
 
 ul + p {
   opacity: 0;
-  transition: opacity .4s ease; }
+  transition: opacity .2s ease;
+  -webkit-transition: opacity .2s ease;
+  margin-top: 0; }
   ul + p.close {
     opacity: 1;
-    transition-delay: .35s; }
+    transition-delay: .85s;
+    -webkit-transition-delay: .85s; }
 
 @-webkit-keyframes move-left {
   0% {
@@ -133,6 +143,20 @@ ul + p {
   100% {
     left: -20px; } }
 @-webkit-keyframes move-right {
+  0% {
+    right: 0; }
+  40% {
+    right: -10px; }
+  100% {
+    right: -20px; } }
+@keyframes move-left {
+  0% {
+    left: 0; }
+  40% {
+    left: -10px; }
+  100% {
+    left: -20px; } }
+@keyframes move-right {
   0% {
     right: 0; }
   40% {

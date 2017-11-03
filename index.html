@@ -11,20 +11,20 @@
 		<div id="app">
 			<div class="wrapper fullPage" :class="{close:!full}">
 				<h2 class="welcome">Welcome to Weicaiyue's GitHub Page</h2>
-				<div class="icon" v-bind:class="{close:!full}" @click=" full=false "></div>
-				<div class="text" :class="{close:!full}"><p>Click Icon For More</p></div>
+				<div class="icon" v-bind:class="{close:!full}" @click=" removeText() "></div>
+				<div class="text" :class="{close:!full,noDisp:remove}"><p>Click Icon For More</p></div>
 			</div>
 			<div class="wrapper">
 				<ul :class="{noDisp:full}">
-					<li :class="{close:!full}">
+					<li :class="{open:!full}">
 						<h3>个人简介</h3>
 						<p>2014年9月考入电子科技大学通信与信息工程学院；曾任通信志愿者服务队队长，获校优秀志愿者称号；游戏爱好者，喜欢界面好看的游戏，很少氪金。</p>
 					</li>
-					<li :class="{close:!full}">
+					<li :class="{open:!full}">
 						<h3>技能</h3>
 						<p>熟练掌握HTML，CSS和JavaScript等网页构建技术。熟悉W3C标准；已掌握Bootstrap，Jquery，Vue等框架并能熟练使用以上框架来构建项目；了解并使用过Nodejs,Webpack,MySQL.</p>
 					</li>
-					<li :class="{close:!full}">
+					<li :class="{open:!full}">
 						<h3>联系方式</h3>
 						<p>邮箱：weicaiyue528@163.com&#8195&#8195&#8195手机：15528177792</p>
 					</li>
