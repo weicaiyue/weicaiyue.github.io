@@ -1,4 +1,4 @@
-.icon:before, ul li:before, ul li:after {
+.icon:before, ul > li:before, ul > li:after {
   content: "";
   display: block;
   position: absolute; }
@@ -72,37 +72,40 @@ body, html, .container, #app {
 ul {
   margin-left: 0;
   width: 80%; }
-  ul li {
+  ul > li {
     width: 100%;
     position: relative;
     display: block;
     list-style-type: none;
     border-top: 5px solid #aaa;
     margin-bottom: 15px;
-    padding: 5px 10px;
+    padding: 10px 10px;
     background-color: #eee; }
-    ul li:before, ul li:after {
+    ul > li:before, ul > li:after {
       position: absolute;
       background-color: #999;
       border-radius: 2px;
       width: 0;
       height: 100%; }
-    ul li:before {
+    ul > li:before {
       top: 0;
       left: 0; }
-    ul li:after {
+    ul > li:after {
       top: 0;
       right: 0; }
-    ul li:hover:before, ul li:hover:after {
+    ul > li:hover:before, ul > li:hover:after {
       width: 5px;
       transition: width .8s ease;
       -webkit-transition: width .8s ease; }
-    ul li:hover:before {
+    ul > li:hover:before {
       animation: move-left .5s linear forwards;
       -webkit-animation: move-left .5s linear forwards; }
-    ul li:hover:after {
+    ul > li:hover:after {
       animation: move-right .5s linear forwards;
       -webkit-animation: move-right .5s linear forwards; }
+
+ol {
+  margin-bottom: 10px; }
 
 ul + p {
   margin-top: 0; }
